@@ -1,13 +1,20 @@
 {
-  "description": "Filament adapter for Joomla Migration.",
-  "require": {
-    "filament/filament": "^5.11.0",
-    "liberusoftware/module-cms-migration-framework": "^0.1",
-    "php": "^8.5",
-    "liberusoftware/module-cms-joomla-migration": "^0.1"
-  },
   "name": "liberusoftware/module-cms-joomla-migration-filament",
+  "description": "Filament adapter for Joomla Migration.",
+  "type": "liberu-module",
   "version": "0.1.0",
+  "license": "MIT",
+  "require": {
+    "php": "^8.5",
+    "filament/filament": "^5.11.0",
+    "liberusoftware/module-cms-joomla-migration": "^0.1",
+    "liberusoftware/module-cms-migration-framework": "^0.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Liberu\\Cms\\JoomlaMigrationFilament\\": "src/"
+    }
+  },
   "extra": {
     "liberu": {
       "name": "module-cms-joomla-migration-filament",
@@ -17,13 +24,6 @@
       "providers": [
         "Liberu\\Cms\\JoomlaMigrationFilament\\JoomlaMigrationFilamentServiceProvider"
       ]
-    }
-  },
-  "type": "liberu-module",
-  "license": "MIT",
-  "autoload": {
-    "psr-4": {
-      "Liberu\\Cms\\JoomlaMigrationFilament\\": "src/"
     }
   }
 }
